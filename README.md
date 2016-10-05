@@ -325,7 +325,7 @@ to https:// requests.
 ```aconf
 <VirtualHost *:80>
     ServerName blog.server.local
-    Redirect / https://blog.server/local
+    Redirect / https://blog.server.local/
 </VirtualHost>
 ```
 
