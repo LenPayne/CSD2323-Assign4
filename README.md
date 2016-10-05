@@ -289,6 +289,7 @@ have a completely new look. To scan for more themes, head over to [https://wordp
 You can install by package name (eg- `wp theme install olsen-light`) or by plain
 readable name (eg- `wp theme install "Olsen Light"`).
 
+
 ### Installing Wordfence
 
 Wordfence is one of the best comprehensive security plugins available for WordPress.
@@ -305,6 +306,28 @@ tutorial and set up your security.
 
 At this point, your site is fairly secure. Great job.
 
+
+### Finishing Touch - HTTP Redirect
+
+In the current state we have it, you may be seeing your site functioning at [https://blog.server.local/](https://blog.server.local/)
+but not at [http://blog.server.local/](http://blog.server.local/). The best
+practice we want to do is set up a 301 Redirect from the http path to https.
+
+We do this in `virtual.conf`.
+
+```bash
+sudo nano /etc/httpd/conf.d/virtual.conf
+```
+
+Add the following configuration to redirect all http:// requests on blog.server.local
+to https:// requests.
+
+```aconf
+<VirtualHost *:80>
+    ServerName blog.server.local
+    Redirect / https://blog.server/local
+</VirtualHost>
+```
 
 
 ## Hand it In
