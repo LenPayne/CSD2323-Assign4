@@ -334,7 +334,7 @@ to https:// requests.
 
 So navigate to: [https://blog.server.local/wp-admin](https://blog.server.local/wp-admin)
 and take a screenshot of the WordPress Dashboard with the green lock for HTTPS,
-and the Wordfence icon visible as installed. Submit the screenshot it to D2L.
+and the Wordfence icon visible as installed. Submit the screenshot of it to D2L.
 
 ![Sample Screenshot](https://github.com/LenPayne/CSD2323-Assign4/raw/master/finished-screencap.png)
 
