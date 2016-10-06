@@ -207,7 +207,7 @@ any more because we turned on the Mandatory Access Control rules of SELinux.
 To read the context information, run the following:
 
 ```bash
-ls -Z /home/blog
+sudo ls -Z /home/blog
 ```
 
 You will see something like:
@@ -276,7 +276,7 @@ correctly: most importantly it keeps `/usr/local/bin` in the user's `$PATH`.
 So anyway, log in as `blog` and play around with `wp`:
 
 ```bash
-su blog
+sudo su - blog
 cd ~/public_html
 wp plugin update-all
 wp theme update-all
