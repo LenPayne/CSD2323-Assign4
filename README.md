@@ -313,7 +313,7 @@ In the current state we have it, you may be seeing your site functioning at [htt
 but not at [http://blog.server.local/](http://blog.server.local/). The best
 practice we want to do is set up a 301 Redirect from the http path to https.
 
-We do this in `virtual.conf`.
+We do this in `virtual.conf`. Note: if you're still logged in as `blog`, the following command will not work. Either `exit` to no longer be logged in as the `blog` user, or open a new Terminal.
 
 ```bash
 sudo nano /etc/httpd/conf.d/virtual.conf
