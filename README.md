@@ -275,9 +275,10 @@ installed and configured,) then you should be able to run `wp --info` and get
 some meaningful feedback.
 
 You can run `wp` as any user, but it's best to actually do this part as `blog` to
-keep the permissions correct. So we'll use `su` to log in as `blog`. We're using
-`su` instead of `sudo su` because `su` retains all the proper login functionality
-correctly: most importantly it keeps `/usr/local/bin` in the user's `$PATH`.
+keep the permissions correct. So we'll use `su` to log in as `blog`. Note that we
+use `sudo su - blog` as the `su - <user>` process logs in as the user completely
+(including environment variables) where just running `sudo su blog` would cause
+`wp` not to work, as the `$PATH` would not be set correctly.
 
 So anyway, log in as `blog` and play around with `wp`:
 
