@@ -246,6 +246,12 @@ With that rule changed, we should now be able to go to [https://blog.server.loca
 safely, with SELinux still turned on. As a bonus, all other UserDir folders will
 also work correctly.
 
+If you are still seeing a 403 Forbidden error in the browser, it may be required to turn on the `httpd_enable_homedirs` option.
+
+```bash
+sudo setsebool -P httpd_enable_homedirs on
+```
+
 
 
 ## Installing wp-cli and Wordfence
